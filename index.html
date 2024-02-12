@@ -85,6 +85,19 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		exampleVariable2 = 0;
 		exampleVariable3 = 0;
 	}
+	function imageFunction()
+	{
+		var1 = parseFloat(document.getElementById("firstInputBox").value);
+    		var2 = parseFloat(document.getElementById("secondInputBox").value);
+		for(let index = 0; index < 5; index++)
+		{
+			var smileyImage = document.createElement(“img”);
+			smileyImage.src = “https://i.imgur.com/jctdkSS.png”;
+			document.getElementById(“another question”).appendChild(smileyImage);
+		}
+	}
+
+	
 </script>
   
   
@@ -166,15 +179,24 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   
   
   
+<!--This is the [x]th page.-->
+<div id="two" class="page">
+	<!--Header.-->
+		<div id="content3" class="w3-container w3-flat-carrot">
+			<h1>Question 2</h1>
+		</div>
+    		
+		<!--Main content of the page.-->
+<div id="another question" class="w3-container">
+<p id="printher">PLACEHOLDER TEXT</p>
+</div>
+  		
+		<!--A link that runs a function when clicked and takes the user to a new page.-->
+<a href=“#pageNameHere” class="     " onclick="functionNameHere();">     </a>
+</div>
 
 	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
+	  	  
 	  
 <!--LAST SUBPAGE-->
 <div id="finalpage" class="page">
