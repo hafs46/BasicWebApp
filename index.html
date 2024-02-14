@@ -40,7 +40,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	var ariel = 0;
 	var cinderella = 0;
 	
-	function addPoint(var princess)
+	function addPoint(princess)
 	{
 		if (princess == 1)
 		{
@@ -62,7 +62,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	function resetVariables()
 	{
-		rapunzel = 1;
+		rapunzel = 0;
 		jasmine = 0;
 		ariel = 0;
 		cinderella = 0;
@@ -73,30 +73,30 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		var winner = "nobody";
 		if (rapunzel > jasmine && rapunzel > jasmine && rapunzel > ariel)
 		{
-			var rapunzel = document.createElement("img");
-			rapunzel.src = "https://i.imgur.com/iGMeahn.jpeg";
-			document.getElementById("query").appendChild(rapunzel);
+			var rapunzelimg = document.createElement("img");
+			rapunzelimg.src = "https://i.imgur.com/iGMeahn.jpeg";
+			document.getElementById("query").appendChild(rapunzelimg);
 			winner = "Rapunzel!";
 		}
 		else if (jasmine > rapunzel && jasmine > ariel && jasmine > cinderella)
 		{
-			var jasmine = document.createElement("img");
-			jasmine.src = "https://lumiere-a.akamaihd.net/v1/images/gallery_princess_jasmine_2_1abea4ca_41f20a9a.jpeg?region=3,0,2175,1223";
-			document.getElementById("query").appendChild(jasmine);
+			var jasmineimg = document.createElement("img");
+			jasmineimg.src = "https://lumiere-a.akamaihd.net/v1/images/gallery_princess_jasmine_2_1abea4ca_41f20a9a.jpeg?region=3,0,2175,1223";
+			document.getElementById("query").appendChild(jasmineimg);
 			winner = "Jasmine!";
 		}
 		else if (ariel > jasmine && ariel > rapunzel && ariel > cinderella)
 		{
-			var ariel = document.createElement("img");
-			ariel.src = "https://upload.wikimedia.org/wikipedia/en/7/77/Ariel_disney.png";
-			document.getElementById("query").appendChild(ariel);
+			var arielimg = document.createElement("img");
+			arielimg.src = "https://upload.wikimedia.org/wikipedia/en/7/77/Ariel_disney.png";
+			document.getElementById("query").appendChild(arielimg);
 			winner = "Ariel!";
 		}
-		else if (cinderella > jasmine && cinderella > jasmine && rapunzel > ariel)
+		else if (cinderella > jasmine && cinderella > ariel && cinderella > rapunzel)
 		{
-			var cinderella = document.createElement("img");
-			cinderella.src = "https://i.etsystatic.com/21091952/r/il/2f189b/2992753099/il_1080xN.2992753099_jdsl.jpg";
-			document.getElementById("query").appendChild(cinderella);
+			var cinderellaimg = document.createElement("img");
+			cinderellaimg.src = "https://i.etsystatic.com/21091952/r/il/2f189b/2992753099/il_1080xN.2992753099_jdsl.jpg";
+			document.getElementById("query").appendChild(cinderellaimg);
 			winner = "Cinderella!";
 		}
 		else 
@@ -106,27 +106,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		}
 		document.getElementById("printher").innerHTML = "You are the princess " + winner;
 
-	}
-	
-	function imageFunction()
-	{
-		var1 = parseFloat(document.getElementById("firstInputBox").value);
-    		var2 = parseFloat(document.getElementById("secondInputBox").value);
-		for(let index = 0; index < var1; index++)
-		{
-			var smileyImage = document.createElement("img");
-			smileyImage.src = "https://i.imgur.com/jctdkSS.png";
-			document.getElementById("query").appendChild(smileyImage);
-		}
-		for(let index2 = 0; index2 < var2; index2++)
-		{
-			var frownyImage = document.createElement("img");
-			frownyImage.src = "https://i.imgur.com/dVUqrSt.png";
-			document.getElementById("query").appendChild(frownyImage);
-		}
-		document.getElementById("printher").innerHTML = "You inserted " + var1 + " smiley faces and " + var2 + " frowny faces!";
-		smileyImage.height = 300;
-		smileyImage.width = 100; 
 	}
 
 </script>
