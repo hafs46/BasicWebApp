@@ -35,7 +35,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <!--Javascript code.-->
 <script>
-	var rapunzel = 1;
+	var rapunzel = 0;
 	var jasmine = 0;
 	var ariel = 0;
 	var cinderella = 0;
@@ -102,6 +102,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		else 
 		{
 			document.getElementById("printher").innerHTML = "You got a tie! Click the home button to play again!";
+			return;
 
 		}
 		document.getElementById("printher").innerHTML = "You are the princess " + winner;
