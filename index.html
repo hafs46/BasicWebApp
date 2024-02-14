@@ -162,7 +162,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   
   
   
-<!--FIRST SUBPAGE-->
+<!--FIRST QUESTION-->
 <div id="one" class="page">
 	<div id="header2" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
@@ -185,25 +185,32 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<br><br><br>
 	</form>
       
-  <a href="#q1" onclick="callAddPoint()" class="w3-btn w3-pink">Next Question</a>
+  <a href="#q2" onclick="callAddPoint()" class="w3-btn w3-pink">Next Question</a>
     
   </center>
 </div>  
 
-<div id="q1" class="page">
+
+<!--SECOND QUESTION-->
+
+<div id="q2" class="page">
 	<!--Header.-->
 	<div id="content3" class="w3-container w3-flat-carrot">
-		<h1>Question 1</h1>
+		<h1>QUESTION 2</h1>
+	</div>
+	<div id="content4" class="w3-container w3-flat-carrot">
+		<h1>What's your favorite setting?</h1>
 	</div>
 
 <center>
 		<!--Main content of the page.-->
-	<div id="query" class="w3-container">
-		<p id="printher">PLACEHOLDER TEXT</p>
-	</div>
+		
   		
 		<!--A link that resets variable when clicked and takes the user to the home page.-->
-	<a href="#content" onclick="resetVariables();" class="w3-btn w3-grey">home button</a>
+	<a href="#q3" onclick="addPoint(1);" class="w3-btn w3-grey">The Forest</a>
+	<a href="#q3" onclick="addPoint(2);" class="w3-btn w3-grey">The Desert</a>
+	<a href="#q3" onclick="addPoint(3);" class="w3-btn w3-grey">The Ocean</a>
+	<a href="#q3" onclick="addPoint(4);" class="w3-btn w3-grey">The City</a>
 	</center>
 		
 </div>
@@ -211,7 +218,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   
   
 <!--ALTERNATE SUBPAGE-->
-<div id="two" class="page">
+<div id="q3" class="page">
 	<!--Header.-->
 	<div id="content3" class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
@@ -219,7 +226,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <center>
 		<!--Main content of the page.-->
-	<div id="query" class="w3-container">
+	<div id="query2" class="w3-container">
 		<p id="printher">PLACEHOLDER TEXT</p>
 	</div>
   		
@@ -240,9 +247,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
   <center>
     
-	  <div id="finalcontent" class="w3-container">
-		  <p id="endResults">FINAL PAGE CONTENT GOES HERE</p>
-	  </div>
+	<div id="query" class="w3-container">
+		<p id="printher">PLACEHOLDER TEXT</p>
+	</div>
   
   <a class="w3-btn w3-black" onclick="exampleResultsFunction();">Click me!
     <br>
