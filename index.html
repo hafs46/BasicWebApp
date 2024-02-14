@@ -203,7 +203,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 
 <center>
-		<!--Main content of the page.-->
 		
   		
 		<!--A link that resets variable when clicked and takes the user to the home page.-->
@@ -217,21 +216,25 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
   
   
-<!--ALTERNATE SUBPAGE-->
+<!--THIRD QUESTION-->
+	  
 <div id="q3" class="page">
 	<!--Header.-->
-	<div id="content3" class="w3-container w3-flat-carrot">
-		<h1>Question 2</h1>
+	<div id="content5" class="w3-container w3-flat-carrot">
+		<h1>QUESTION 3</h1>
+	</div>
+	<div id="content6" class="w3-container">
+		<h1>What's your favorite kind of music?</h1>
 	</div>
 
 <center>
-		<!--Main content of the page.-->
-	<div id="query2" class="w3-container">
-		<p id="printher">PLACEHOLDER TEXT</p>
-	</div>
+		
   		
 		<!--A link that resets variable when clicked and takes the user to the home page.-->
-	<a href="#content" onclick="resetVariables();" class="w3-btn w3-grey">home button</a>
+	<a href="#finalpage" onclick="addPoint(1);" class="w3-btn w3-grey">Love Songs</a>
+	<a href="#finalpage" onclick="addPoint(2);" class="w3-btn w3-grey">Epic Scores</a>
+	<a href="#finalpage" onclick="addPoint(3);" class="w3-btn w3-grey">Tropical Tunes</a>
+	<a href="#finalpage" onclick="addPoint(4);" class="w3-btn w3-grey">Classical Music</a>
 	</center>
 		
 </div>
@@ -239,10 +242,23 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	  
 	  	  
 	  
-<!--LAST SUBPAGE-->
+<!--FINAL SUBPAGE-->
 <div id="finalpage" class="page">
 	<div id="finalheader" class="w3-container w3-flat-carrot">
-		<h1>FINAL PAGE TITLE GOES HERE</h1>
+		<h1>CLICK FOR RESULTS</h1>
+	</div>
+	
+  <center>
+    
+  
+<a href="#results" onclick="winningPage();" class="w3-btn w3-grey">Results</a>
+	</center>
+</div>
+
+<!--RESULTS SUBPAGE-->
+<div id="results" class="page">
+	<div id="finalheader" class="w3-container w3-flat-carrot">
+		<h1>RESULTS</h1>
 	</div>
 	
   <center>
@@ -251,13 +267,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p id="printher">PLACEHOLDER TEXT</p>
 	</div>
   
-  <a class="w3-btn w3-black" onclick="exampleResultsFunction();">Click me!
-    <br>
-    <img id="resultsButtonImg" src="https://i.imgur.com/rZOaHhx.png" width="30" alt="spongebob">
-  </a>
-  <a href="#content" onclick="resetVariables();" class="w3-btn w3-black">Return to Home Page</a>
-    
-  </center>
+<a href="#content" onclick="resetVariables();" class="w3-btn w3-grey">Click to go home!</a>
+	</center>
 </div>
   
   
