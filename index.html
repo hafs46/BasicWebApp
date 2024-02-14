@@ -66,6 +66,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		jasmine = 0;
 		ariel = 0;
 		cinderella = 0;
+		document.getElementById("query").innerHTML = "";
 	}
 
 	function winningScreen()
@@ -81,7 +82,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		else if (jasmine > rapunzel && jasmine > ariel && jasmine > cinderella)
 		{
 			var jasmineimg = document.createElement("img");
-			jasmineimg.src = "https://lumiere-a.akamaihd.net/v1/images/gallery_princess_jasmine_2_1abea4ca_41f20a9a.jpeg?region=3,0,2175,1223";
+			jasmineimg.src = "https://upload.wikimedia.org/wikipedia/en/0/00/Jasmine_%28Aladdin%29.png";
 			document.getElementById("query").appendChild(jasmineimg);
 			winner = "Jasmine!";
 		}
@@ -268,7 +269,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
   
 <a href="#content" onclick="resetVariables();" class="w3-btn w3-pink">Click to go home!</a>
-<a onclick="winningScreen();" class="w3-btn w3-pink">refresh results</a>
 	</center>
 </div>
   
