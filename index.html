@@ -24,7 +24,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
   <!--Formatting source information and webpage title.-->
   <head>
-    <title>APP NAME GOES HERE</title>
+    <title>Which Disney Princess are you?</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="stylesheet" href="w3.css">
@@ -35,56 +35,79 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <!--Javascript code.-->
 <script>
-	var exampleVariable1 = 0;
-	var exampleVariable2 = 0;
-	var exampleVariable3 = 0;
+	var rapunzel = 0;
+	var jasmine = 0;
+	var ariel = 0;
+	var cinderella = 0;
 	
-	function exampleFunction1()
+	function addPoint(var princess)
 	{
-		// Assigns values to existing variables based on user input. The parseFloat() function converts string values to numerical values.
-    		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
-		
-		exampleVariable3 = exampleVariable1 + exampleVariable2;
-		
-		alert("You just ran an addition function!");
-		console.log("Addition function was run.");
-	}
-	
-	function exampleFunction2()
-	{
-		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
-		
-		exampleVariable3 = exampleVariable1 * exampleVariable2;
-		
-		alert("You just ran a multiplication function!");
-		console.log("Multiplication function was run.");
-	}
-	
-	function exampleFunction3()
-	{
-		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
-		
-		exampleVariable3 = exampleVariable1 ** exampleVariable2;
-		
-		alert("You just ran an exponent function!");
-		console.log("Exponent function was run.");
-	}
-	
-	function exampleResultsFunction()
-	{
-		document.getElementById("endResults").innerHTML = "Your final result is: " + exampleVariable3;
-		resetVariables();
+		if (princess == 1)
+		{
+			rapunzel++;
+		}
+		else if (princess == 2)
+		{
+			jasmine++;
+		}
+		else if (princess == 3)
+		{
+			ariel++;
+		}
+		else 
+		{
+			cinderella++
+		}
 	}
 	
 	function resetVariables()
 	{
-		exampleVariable1 = 0;
-		exampleVariable2 = 0;
-		exampleVariable3 = 0;
+		rapunzel = 1;
+		jasmine = 0;
+		ariel = 0;
+		cinderella = 0;
 	}
+
+	function winningScreen()
+	{
+		var winner = "nobody";
+		if (rapunzel > jasmine && rapunzel > jasmine && rapunzel > ariel)
+		{
+			var rapunzel = document.createElement("img");
+			rapunzel.src = "https://i.imgur.com/iGMeahn.jpeg";
+			document.getElementById("query").appendChild(rapunzel);
+			winner = "Rapunzel!";
+		}
+		else if (jasmine > rapunzel && jasmine > ariel && jasmine > cinderella)
+		{
+			var jasmine = document.createElement("img");
+			jasmine.src = "https://lumiere-a.akamaihd.net/v1/images/gallery_princess_jasmine_2_1abea4ca_41f20a9a.jpeg?region=3,0,2175,1223";
+			document.getElementById("query").appendChild(jasmine);
+			winner = "Jasmine!";
+		}
+		else if (ariel > jasmine && ariel > rapunzel && ariel > cinderella)
+		{
+			var ariel = document.createElement("img");
+			ariel.src = "https://upload.wikimedia.org/wikipedia/en/7/77/Ariel_disney.png";
+			document.getElementById("query").appendChild(ariel);
+			winner = "Ariel!";
+		}
+		else if (cinderella > jasmine && cinderella > jasmine && rapunzel > ariel)
+		{
+			var cinderella = document.createElement("img");
+			cinderella.src = "https://i.etsystatic.com/21091952/r/il/2f189b/2992753099/il_1080xN.2992753099_jdsl.jpg";
+			document.getElementById("query").appendChild(cinderella);
+			winner = "Cinderella!";
+		}
+		else 
+		{
+			document.getElementById("printher").innerHTML = "You got a tie! Click the home button to play again!";
+
+		}
+		document.getElementById("printher").innerHTML = "You are the princess " + winner;
+
+	}
+	
 	function imageFunction()
 	{
 		var1 = parseFloat(document.getElementById("firstInputBox").value);
@@ -106,7 +129,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		smileyImage.width = 100; 
 	}
 
-	
 </script>
   
   
@@ -182,7 +204,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   <a href="#finalpage" onclick="exampleFunction1();" class="w3-btn w3-grey">Button 1</a>
   <a href="#finalpage" onclick="exampleFunction2();" class="w3-btn w3-grey">Button 2</a>
   <a href="#finalpage" onclick="exampleFunction3();" class="w3-btn w3-grey">Button 3</a>
-  <a href="#two" onclick="imageFunction();" class="w3-btn w3-grey">test button</a>
+  <a href="#two" onclick="winningScreen();" class="w3-btn w3-grey">test button</a>
     
   </center>
 </div>  
