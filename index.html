@@ -109,6 +109,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	}
 
+	function callAddPoint()
+	{
+		var inputValue.document.getElementById("firstInputBox").value;
+		inputValue = parseInt(inputValue);
+		addPoint(inputValue);
+	}
+
 </script>
   
   
@@ -164,7 +171,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   <center>
     
     	<div id="content2" class="w3-container">
-        	<p>QUESTION 1 GOES HERE</p>    
+        	<p>QUESTION 1</p>    
     	</div>
 	
 	<!--Form element. This allows for user input in HTML.-->
@@ -178,10 +185,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<br><br><br>
 	</form>
       
-  <a href="#q1" class="w3-btn w3-pink">Button 1</a>
-  <a href="#finalpage" onclick="exampleFunction2();" class="w3-btn w3-grey">Button 2</a>
-  <a onclick="addPoint(1);" class="w3-btn w3-grey">add point button</a>
-  <a href="#two" onclick="winningScreen();" class="w3-btn w3-grey">test button</a>
+  <a href="#q1" onclick="callAddPoint()" class="w3-btn w3-pink">Next Question</a>
     
   </center>
 </div>  
