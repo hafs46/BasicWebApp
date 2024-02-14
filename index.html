@@ -66,7 +66,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		jasmine = 0;
 		ariel = 0;
 		cinderella = 0;
-		document.getElementById("query").innerHTML = "";
+		var images = document.querySelectorAll("#query img");
+    		images.forEach(function(img) {
+       			img.style.display = "none";
+		});
 	}
 
 	function winningScreen()
@@ -96,7 +99,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		else if (cinderella > jasmine && cinderella > ariel && cinderella > rapunzel)
 		{
 			var cinderellaimg = document.createElement("img");
-			cinderellaimg.src = "https://i.etsystatic.com/21091952/r/il/2f189b/2992753099/il_1080xN.2992753099_jdsl.jpg";
+			cinderellaimg.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBZ5hotgzm9ZbVRPfrZF7hgOGFnssDJ7v3fw&usqp=CAU";
 			document.getElementById("query").appendChild(cinderellaimg);
 			winner = "Cinderella!";
 		}
